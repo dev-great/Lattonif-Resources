@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Kamran Mubarik">
+    <meta name="content" content="KM Tutorial Online">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Application Form</title>
+    <link href="assets/css/theme.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="container">
+        <main class="main" id="top">
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top py-5 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
+                    <div class="container"><a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" height="60"
+                                alt="logo" /></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                                class="navbar-toggler-icon"> </span></button>
+                        <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base align-items-lg-center align-items-start">
+                                <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="index.html">Home</a></li>
+                                <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page"
+                                        href="#destination">About</a></li>
+                                <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page"
+                                        href="#service">Service</a></li>
+                                <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page" href="#booking">How
+                                        to Apply</a></li>
+                                <li class="nav-item px-3 px-xl-4"><a class="nav-link fw-medium" aria-current="page"
+                                        href="#testimonial">Testimonial</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            <div class="application-form">
+               
+                <br>
+                <div class="application-form-detail">
+                    <form>
+                        <h4>Contact Information</h4>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label>First Name *</label>
+                                <input type="text" id="fname" name="fname" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name *</label>
+                                <input type="text" id="lname" name="lname" required>
+                            </div>
+                        </div>
+                      
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="text" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Home Address *</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                        <br>
+                        <h4>Supporting Documents</h4>
+                        <hr>
+                        <div class="form-group">
+                            <label>Curriculum Vitae (CV) Upload</label>
+                            <input type="file" id="cv" name="cv">
+                        </div>
+                        <div class="form-group">
+                            <label>Passport Upload</label>
+                            <input type="file" id="passport" name="passport">
+                        </div>
+                        <br>
+                        <h4>Guarantor Information</h4>
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label>First Name *</label>
+                                <input type="text" id="gfname" name="gfname" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name *</label>
+                                <input type="text" id="glname" name="glname" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-inline">
+                            <div class="form-group">
+                                <label>Phone Number *</label>
+                                <input type="text" id="gphone" name="gphone" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address *</label>
+                                <input type="email" id="gemail" name="gemail" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Home Address *</label>
+                            <input type="text" id="gaddress" name="gaddress" required>
+                        </div>
+               
+                        <br>
+                       
+                        <hr><br>
+                       
+                        <button  class="btn btn-primary btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow"  onclick="payWithPaystack()" type="submit">Submit Application</button>
+                    </form>
+                </div>
+            </div>
+        </main> <!-- Main Area -->
+    </div>
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+<section class="pt-6">
+
+    <div class="container">
+        <div class="py-8 px-5 position-relative text-center"
+            style="background-color: rgba(223, 215, 249, 0.199);border-radius: 129px 20px 20px 20px;">
+            <div class="position-absolute start-100 top-0 translate-middle ms-md-n3 ms-n4 mt-3"> <img
+                    src="assets/img/cta/send.png" style="max-width:70px;" alt="send icon" /></div>
+            <div class="position-absolute end-0 top-0 z-index--1"> <img src="assets/img/cta/shape-bg2.png" width="264"
+                    alt="cta shape" /></div>
+            <div class="position-absolute start-0 bottom-0 ms-3 z-index--1 d-none d-sm-block"> <img
+                    src="assets/img/cta/shape-bg1.png" style="max-width: 340px;" alt="cta shape" /></div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <h2 class="text-secondary lh-1-7 mb-7">Subscribe to get information, latest news and other
+                        interesting offers from Lattonif Resources</h2>
+                    <form class="row g-3 align-items-center w-lg-75 mx-auto">
+                        <div class="col-sm">
+                            <div class="input-group-icon">
+                                <input class="form-control form-little-squirrel-control" type="email"
+                                    placeholder="Enter email " aria-label="email" /><img class="input-box-icon"
+                                    src="assets/img/cta/mail.svg" width="17" alt="mail" />
+                            </div>
+                        </div>
+                        <div class="col-sm-auto">
+
+                            <button class="btn btn-danger orange-gradient-btn fs--1">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!-- end of .container-->
+
+</section>
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+
+
+
+<!-- ============================================-->
+<!-- <section> begin ============================-->
+<section class="pb-0 pb-lg-4">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-7 col-12 mb-4 mb-md-6 mb-lg-0 order-0"> <img class="mb-4"
+                    src="assets/img/logo.png" width="150" alt="jadoo" />
+                <p class="fs--1 text-secondary mb-0 fw-medium">Welcome to Lattonif Resources, your Gateway to a Thriving
+                    Career in the UK!.</p>
+            </div>
+            <div class="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-1 order-md-2">
+                <h4 class="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">Company</h4>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">About</a></li>
+                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Careers</a></li>
+                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Mobile</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-2 order-md-3">
+                <h4 class="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">Contact</h4>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Help/FAQ</a></li>
+                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Press</a></li>
+                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Affiliate</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 mb-4 mb-lg-0 order-lg-3 order-md-4">
+                <h4 class="footer-heading-color fw-bold font-sans-serif mb-3 mb-lg-4">More</h4>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">UK
+                            Accomodation</a></li>
+                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Airline</a></li>
+                    <li class="mb-2"><a class="link-900 fs-1 fw-medium text-decoration-none" href="#!">Low fare tips</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-5 col-12 mb-4 mb-md-6 mb-lg-0 order-lg-4 order-md-1">
+                <div class="icon-group mb-4"> <a class="text-decoration-none icon-item shadow-social" id="facebook"
+                        href="#!"><i class="fab fa-facebook-f"> </i></a><a
+                        class="text-decoration-none icon-item shadow-social" id="instagram" href="#!"><i
+                            class="fab fa-instagram"> </i></a><a class="text-decoration-none icon-item shadow-social"
+                        id="twitter" href="#!"><i class="fab fa-twitter"> </i></a></div>
+            </div>
+        </div>
+    </div><!-- end of .container-->
+
+</section>
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+
+<div class="py-5 text-center">
+    <p class="mb-0 text-secondary fs--1 fw-medium">All rights Lattonif Resources </p>
+</div>
+</main>
+<!-- ===============================================-->
+<!--    End of Main Content-->
+<!-- ===============================================-->
+
+
+<script>
+    function payWithPaystack() {
+        var handler = PaystackPop.setup({
+            key: 'pk_test_91130c972c5af7ec4b37e1a4a9428eb128d41f68',
+            email:  "official.gmarshal@gmail.com",
+            amount:"25000000",
+            metadata: {
+                custom_fields: [
+                    {
+                        display_name: "Greatness Marshal",
+                        variable_name: "08100808038",
+                        value: "08100808038",
+                    }
+                ]
+            },
+            callback: function (response) {
+                if (response.status == "success") {
+                    
+                } else {
+                   
+                }
+            },
+
+            onClose: function () {
+              
+            }
+        });
+        handler.openIframe();
+    }
+
+</script>
+
+
+<!-- ===============================================-->
+<!--    JavaScripts-->
+<!-- ===============================================-->
+<script src="vendors/@popperjs/popper.min.js"></script>
+<script src="vendors/bootstrap/bootstrap.min.js"></script>
+<script src="vendors/is/is.min.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+<script src="vendors/fontawesome/all.min.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;family=Volkhov:wght@700&amp;display=swap"
+    rel="stylesheet">
+</body>
+
+
+</html>
